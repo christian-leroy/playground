@@ -113,12 +113,17 @@ Header
         grid-template-areas: 
         "day time ."
         "day title dj"
-        ". location dj" /* Je nach Breakpoint unten rechts dj oder location*/
+        ". location location"; /* Je nach Breakpoint unten rechts dj oder location*/
     }
 
-
-
-
+@media (min-width: 400px) {
+    .milonga{
+        grid-template-areas: 
+         "day time ."
+        "day title dj"
+        ". location dj"; /* Je nach Breakpoint unten rechts dj oder location*/   
+    }
+}
     /* Col 1: Date*/
     .milonga-date{
         display: flex;
