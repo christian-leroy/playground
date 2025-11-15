@@ -5,9 +5,9 @@
     --calendar-vertical-gap: 0rem;
 
     /* Font sizes Milonga Calendar*/
-    --large: clamp(1.0rem, 1.0rem + 0.5vw, 1.5rem);
-    --medium: clamp(0.8rem, 0.7rem + 0.3vw, 1.2rem);
-    --small: clamp(0.6rem, 0.7rem + 0.3vw, 1.0rem);
+    --large: clamp(1.3rem, 1.0rem + 0.5vw, 1.6rem);
+    --medium: clamp(1.0rem, 0.8rem + 0.3vw, 1.3rem);
+    --small: clamp(0.8rem, 0.8rem + 0.3vw, 1.0rem);
 
     --accent-color: #1b0f80;
     --standard-weight: 400;
