@@ -11,6 +11,9 @@
     "city": "72072 Tübingen"
     },
     
+
+
+
     {
     "title": "Milonga im Latour",
     "date": "2025-11-16",
@@ -153,5 +156,46 @@
     "venue": "Innovationszentrum Westspitze",
     "street": "Eisenbahnstraße 1",
     "city": "72070 Tübingen"
+    },
+
+
+
+
+    {
+    "title": "Practica und Schritt der Woche",
+    "date": "2025-11-18",
+    "dj": "DJ Urban",
+    "style": "Traditionell",
+    "start_time": "20:00",
+    "end_time": "23:00",
+    "venue": "Weilheimer Kneiple",
+    "street": "Alte Landstraße 36",
+    "city": "72072 Tübingen"
+    },
+
+    {
+    "title": "Practica und Schritt der Woche",
+    "date": "2025-11-25",
+    "dj": "DJ Urban",
+    "style": "Traditionell",
+    "start_time": "20:00",
+    "end_time": "23:00",
+    "venue": "Weilheimer Kneiple",
+    "street": "Alte Landstraße 36",
+    "city": "72072 Tübingen"
+    },
+
+
+
+    {
+    "title": "Milonga Mis Amores",
+    "date": "2025-12-03",
+    "dj": "DJ Anja",
+    "style": "Traditionell",
+    "start_time": "19:00",
+    "end_time": "23:00",
+    "venue": "Café Latour",
+    "street": "Bei den Pferdeställen 2",
+    "city": "72072 Tübingen"
     }
 ]

@@ -1,5 +1,5 @@
 /* Global Variables */
-const dayNames = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]
+const dayNames = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"]
 const monthNames = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"];
 const milongaCalendar = document.getElementById("cal")
 const defaultAmount = 2 // Set this dynamically with regard to the screen width. Mobile 2, Desktop 5
@@ -12,7 +12,6 @@ async function init(){
     milongas = await getMilongas()
     milongas = processMilongas(milongas)
     console.log("Fetched and processed milonga data from JSON.")
-    console.log(milongas.length)
     displayNextMilongas(defaultAmount)
 }
 
@@ -41,7 +40,6 @@ function displayNextMilongas(k){
  * @param {number} k – The number of milongas to display
  * */
     // Sanity check
-    console.log("Displaying...")
     if (k > milongas.length){
         k = milongas.length;
     }
@@ -61,7 +59,6 @@ function displayNextMilongas(k){
         }
         html_buffer += createMilongaHTML(milongas[nextMilonga])
         lastMilongaInCurrentCal +=1
-        console.log(html_buffer);
     }
 
     milongaCalendar.insertAdjacentHTML('beforeend', html_buffer)
@@ -137,6 +134,7 @@ function createMilongaHTML(milonga){
     const city = milonga.city;
     const dj = milonga.dj;
     const dj_style = milonga.style;
+    console.log(milonga.date.getDay())
 
     // Write everything as one large HTML block
     html = 
