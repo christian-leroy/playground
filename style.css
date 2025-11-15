@@ -197,10 +197,3 @@ Header
 #show-less{
     display:none;
 }
-
-body{
-    font-size:var(--medium);
-    font-family: var(--primary-font);
-    font-weight: 300;
-}
-        
