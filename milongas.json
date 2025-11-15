@@ -1,0 +1,157 @@
+[
+    {
+    "title": "Milonga La Mariposa",
+    "date": "2025-11-22",
+    "dj": "DJ Christian",
+    "style": "Traditionell",
+    "start_time": "19:00",
+    "end_time": "23:00",
+    "venue": "Deutsch-Amerikanisches-Institut",
+    "street": "Karlstraße 3",
+    "city": "72072 Tübingen"
+    },
+    
+    {
+    "title": "Milonga im Latour",
+    "date": "2025-11-16",
+    "dj": "DJ Micha",
+    "style": "Neo",
+    "start_time": "18:00",
+    "end_time": "22:00",
+    "venue": "Café Latour",
+    "street": "Bei den Pferdeställen 2",
+    "city": "72072 Tübingen"
+    },
+
+    {
+    "title": "Milonga im Latour",
+    "date": "2025-11-23",
+    "dj": "DJ Urban",
+    "style": "Traditionell",
+    "start_time": "18:00",
+    "end_time": "22:00",
+    "venue": "Café Latour",
+    "street": "Bei den Pferdeställen 2",
+    "city": "72072 Tübingen"
+    },
+
+    {
+    "title": "Milonga im Latour",
+    "date": "2025-11-30",
+    "dj": "DJ Klaus",
+    "style": "Gemischt",
+    "start_time": "18:00",
+    "end_time": "22:00",
+    "venue": "Café Latour",
+    "street": "Bei den Pferdeställen 2",
+    "city": "72072 Tübingen"
+    },
+
+    {
+    "title": "Milonga im Latour",
+    "date": "2025-12-07",
+    "dj": "DJ Rainer",
+    "style": "Gemischt",
+    "start_time": "18:00",
+    "end_time": "22:00",
+    "venue": "Café Latour",
+    "street": "Bei den Pferdeställen 2",
+    "city": "72072 Tübingen"
+    },
+
+    {
+    "title": "Milonga im Latour",
+    "date": "2025-12-14",
+    "dj": "DJ Sarah",
+    "style": "Traditionell",
+    "start_time": "18:00",
+    "end_time": "22:00",
+    "venue": "Café Latour",
+    "street": "Bei den Pferdeställen 2",
+    "city": "72072 Tübingen"
+    },
+
+    {
+    "title": "Milonga im Latour",
+    "date": "2025-12-21",
+    "dj": "DJ Elmar",
+    "style": "Traditionell",
+    "start_time": "18:00",
+    "end_time": "22:00",
+    "venue": "Café Latour",
+    "street": "Bei den Pferdeställen 2",
+    "city": "72072 Tübingen"
+    },
+
+    {
+    "title": "Milonga im Latour",
+    "date": "2025-12-28",
+    "dj": "DJ Rainer",
+    "style": "Gemischt",
+    "start_time": "18:00",
+    "end_time": "22:00",
+    "venue": "Café Latour",
+    "street": "Bei den Pferdeställen 2",
+    "city": "72072 Tübingen"
+    },   
+
+    {
+    "title": "Milonga im Latour",
+    "date": "2026-01-04",
+    "dj": "DJ Urban",
+    "style": "Traditionell",
+    "start_time": "18:00",
+    "end_time": "22:00",
+    "venue": "Café Latour",
+    "street": "Bei den Pferdeställen 2",
+    "city": "72072 Tübingen"
+    },
+
+    {
+    "title": "Milonga in der Westspitze",
+    "date": "2025-11-29",
+    "dj": "DJ TBA",
+    "style": "Traditionell",
+    "start_time": "20:00",
+    "end_time": "24:00",
+    "venue": "Innovationszentrum Westspitze",
+    "street": "Eisenbahnstraße 1",
+    "city": "72070 Tübingen"
+    },
+
+    {
+    "title": "Milonga in der Westspitze",
+    "date": "2025-12-20",
+    "dj": "DJ TBA",
+    "style": "Traditionell",
+    "start_time": "20:00",
+    "end_time": "24:00",
+    "venue": "Innovationszentrum Westspitze",
+    "street": "Eisenbahnstraße 1",
+    "city": "72070 Tübingen"
+    },
+
+    {
+    "title": "Milonga in der Westspitze",
+    "date": "2026-01-31",
+    "dj": "DJ TBA",
+    "style": "Traditionell",
+    "start_time": "20:00",
+    "end_time": "24:00",
+    "venue": "Innovationszentrum Westspitze",
+    "street": "Eisenbahnstraße 1",
+    "city": "72070 Tübingen"
+    },
+    
+    {
+    "title": "Milonga in der Westspitze",
+    "date": "2026-02-28",
+    "dj": "DJ TBA",
+    "style": "Traditionell",
+    "start_time": "20:00",
+    "end_time": "24:00",
+    "venue": "Innovationszentrum Westspitze",
+    "street": "Eisenbahnstraße 1",
+    "city": "72070 Tübingen"
+    }
+]

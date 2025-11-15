@@ -1,0 +1,119 @@
+  
+  :root{
+    --primary-font: "Montserrat";
+    --secondary-font: "Montserrat";
+    --calendar-vertical-gap: 0rem;
+
+    /* Font sizes Milonga Calendar*/
+    --large: clamp(1.0rem, 1.0rem + 0.5vw, 1.5rem);
+    --medium: clamp(0.8rem, 0.7rem + 0.3vw, 1.2rem);
+    --small: clamp(0.6rem, 0.7rem + 0.3vw, 1.0rem);
+  }
+
+/* Milonga Calendar*/ 
+.milonga-cal-wrapper{
+    max-width:1000px;
+}
+.milonga-cal-grid{
+        display:grid;
+        gap: 1.5rem;
+        grid-auto-flow: row;
+        margin: 0;
+        max-width: 1000px;
+    }
+    .milonga{
+        margin-left: 6px;
+        display:grid;
+        align-items: center;
+        grid-auto-columns: 22px minmax(0, 6fr) minmax(0, 4fr);
+        row-gap: var(--calendar-vertical-gap);
+        column-gap: 1rem;
+        grid-template-areas: 
+        "day time ."
+        "day title dj"
+        ". location ."
+    }
+
+
+    /* Col 1: Date*/
+    .milonga-date{
+        display: flex;
+        flex-direction: column;
+        gap: var(--calendar-vertical-gap);
+        align-items: center;
+    }
+        .weekday{
+            font-size: var(--small);
+            font-weight: 300;
+        }
+        .date{
+            font-family: var(--secondary-font);
+            font-size: var(--large);
+            font-weight: 700;
+        }
+
+    /* Col 2: Title*/
+
+    .milonga-time{
+        font-size: var(--small);
+    }    
+
+    .milonga-title{
+        font-family: var(--secondary-font);
+        font-weight: 700;
+        font-size: var(--large);
+    }
+     
+    .milonga-location{
+        font-size: var(--medium);
+    }
+    
+        .street, .city{
+        white-space: nowrap; /* Prevents line breaks such as 72072<br>Tübingen */
+    }
+
+    /* Col 3 */
+    .milonga-dj{
+        display: flex;
+        flex-direction: column;
+        gap: var(--calendar-vertical-gap);
+    }
+        .dj-name{
+            font-family: var(--secondary-font);
+            font-size: var(--medium);
+            font-weight: 600;
+        }
+        .dj-style{
+            font-family: var(--secondary-font);
+            font-size: var(--medium);
+        }
+
+    
+    .month-divider{
+        font-size: var(--medium);
+        font-weight: 200;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .month-divider::after{
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: #ddd;    
+    }
+
+/* Calendar Buttons */
+.milonga-cal-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+#show-less{
+    display:none;
+}
+
+body{
+    font-size:var(--large);
+    font-family: var(--primary-font);
+    font-weight: 300;
+}
