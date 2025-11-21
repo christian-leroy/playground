@@ -64,23 +64,22 @@ function displayNextMilongas(k){
     milongaCalendar.insertAdjacentHTML('beforeend', html_buffer)
 }
 
-function deleteLastMilongas(k){
+
+function collapseMilongas(){
     /**
-     * Deletes the last k milongas in the calendar. Will never display less than {@link defaultAmount} entries.
-     * Checks if month divider needs to be removed.
+     * Deletes all milongas and month-divider leaving only the default amount.
      */
-    
-    // TODO: Implement this
-
-    // Check if we would farther back than defaultAmount
-    let goalIndex = 1 + lastMilongaInCurrentCal - k
-    if (1 + lastMilongaInCurrentCal - k < defaultAmount){
-        goalIndex = defaultAmount - 1
+    while(lastMilongaInCurrentCal > defaultAmount -1){
+        let lastEntry = milongaCalendar.lastChild
+        // Check if last entry is a month divider
+        if (lastEntry.className === "month-divider")
+            {lastEntry.remove()
+            lastEntry = milongaCalendar.lastChild
+            }
+        lastEntry.remove()
+        lastMilongaInCurrentCal -= 1;
     }
-    while (lastMilongaInCurrentCal > goalIndex){
-        const previousMonth = milongas[lastMilongaInCurrentCal]
-    }
-
+    currentMonth = milongas[lastMilongaInCurrentCal].date.getMonth()
 }
 
 
@@ -166,8 +165,7 @@ moreBtn.onclick = () => {
     lessBtn.style.display = "flex"; 
 }
 lessBtn.onclick = () => {
-    //deleteLastMilongas(defaultAmount) // oder alles?
-    if(lastMilongaInCurrentCal === defaultAmount - 1)
+    collapseMilongas()
     {lessBtn.style.display = "none";}
     lessBtn.style.display = "none";
 }   

@@ -9,17 +9,19 @@
     --medium: clamp(1.0rem, 0.8rem + 0.3vw, 1.3rem);
     --small: clamp(0.8rem, 0.8rem + 0.3vw, 1.0rem);
 
-    --accent-color: #002FA7;
+    --accent-color: #e27e26;
     --standard-weight: 400;
     --accent-weight: 600;
   }
 
 h1{
-    font-size: var(--large);
+    font-size: var(--medium);
+    font-variant: small-caps;
 }
 
 html{
     scroll-behavior: smooth;
+    background-color: whitesmoke;
 }
 
 /* General page layout*/
@@ -207,18 +209,61 @@ Header
 #show-less{
     display:none;
 }
+#show-more{
+    margin-left: 45px;
+}
+
+
+
+.teacher-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        margin-bottom: 1rem;
+    }
+
+.teacher{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.teacher-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.teacher-name{
+    font-size: 1rem;
+}
+
+
 
 .community-container{
-    display: flex;
-    align-items: center;
-    width: 300px;
-    border: 1.2px solid var(--accent-color);
-    border-radius: 20px;
-}
-.community-content{
-    display:flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
+}
+@media(min-width: 700px){
+    .community-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.community{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;}
+
+.enumerator{
+    display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 8%;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid black;
+    border-radius: 50%;
+    font-weight: 500;
+    flex-shrink: 0;
 }
