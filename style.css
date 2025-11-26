@@ -1,7 +1,7 @@
 /* Definition of variables */
   :root{
     --primary-font: "Montserrat";
-    --secondary-font: "Montserrat";
+    --secondary-font: "Archivo";
     --calendar-vertical-gap: 0rem;
 
     /* Font sizes Milonga Calendar*/
@@ -9,11 +9,11 @@
     --medium: clamp(1.0rem, 0.8rem + 0.3vw, 1.3rem);
     --small: clamp(0.8rem, 0.8rem + 0.3vw, 1.0rem);
 
-    --accent-color: #e27e26;
+    --accent-color: grey;
     --standard-weight: 400;
     --accent-weight: 600;
   }
-
+/* #d41815; Tübingen-Rot */
 h1{
     font-size: var(--medium);
     font-variant: small-caps;
@@ -139,13 +139,14 @@ Header
         align-items: center;
     }
         .weekday{
+            /* font-family: var(--secondary-font); */
             font-size: var(--small);
             font-weight: 300;
         }
         .date{
-            font-family: var(--secondary-font);
+            /* font-family: var(--secondary-font); */
             font-size: var(--large);
-            font-weight: 700;
+            font-weight: 300;
         }
 
     /* Col 2: Title*/
@@ -155,7 +156,6 @@ Header
     }    
 
     .milonga-title{
-        font-family: var(--secondary-font);
         font-weight: 700;
         font-size: var(--large);
     }
@@ -176,23 +176,21 @@ Header
         gap: var(--calendar-vertical-gap);
     }
         .dj-name{
-            font-family: var(--secondary-font);
             font-size: var(--medium);
             font-weight: 600;
             margin-top: 1px;
         }
         .dj-style{
-            font-family: var(--secondary-font);
             font-size: var(--medium);
         }
 
-    
     .month-divider{
         font-size: var(--medium);
         font-weight: 300;
         display: flex;
         align-items: center;
         gap: 1rem;
+        /* font-family: var(--secondary-font); */
     }
     .month-divider::after{
     content: "";
@@ -266,4 +264,11 @@ Header
     border-radius: 50%;
     font-weight: 500;
     flex-shrink: 0;
+}
+
+.community-icon{
+    width: 120px;
+    height: 120px;
+    align-self: flex-start;
+    justify-self: flex-start;
 }

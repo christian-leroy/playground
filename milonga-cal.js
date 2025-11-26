@@ -79,6 +79,12 @@ function collapseMilongas(){
         lastEntry.remove()
         lastMilongaInCurrentCal -= 1;
     }
+
+    // Edge case where one last month-divier is not removed because while-loop ended when defaultAmount was reached. 
+    if (milongaCalendar.lastChild.className === "month-divider")
+        {milongaCalendar.lastChild.remove()}
+    
+    // Reset current month so calling displayNextMilongas will work
     currentMonth = milongas[lastMilongaInCurrentCal].date.getMonth()
 }
 
