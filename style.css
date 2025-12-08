@@ -1,7 +1,7 @@
 /* Definition of variables */
   :root{
     --primary-font: "Montserrat";
-    --secondary-font: "Archivo";
+    --secondary-font: "JetBrains Mono";
     --calendar-vertical-gap: 0rem;
 
     /* Font sizes Milonga Calendar*/
@@ -9,14 +9,17 @@
     --medium: clamp(1.0rem, 0.8rem + 0.3vw, 1.3rem);
     --small: clamp(0.8rem, 0.8rem + 0.3vw, 1.0rem);
 
-    --accent-color: grey;
+    --accent-color: #E75821;
     --standard-weight: 400;
     --accent-weight: 600;
   }
 /* #d41815; Tübingen-Rot */
 h1{
-    font-size: var(--medium);
+    font-size: var(--large);
     font-variant: small-caps;
+}
+h2{
+    font-size: var(--medium);
 }
 
 html{
@@ -45,10 +48,12 @@ body
 
 a{
     text-decoration: none;
-    color: black;
+    color: #E75821;
+    font-family: var(--secondary-font);
+    font-weight: 300;
 }
 a:hover{
-    color: var(--accent-color);
+    color: grey;
 }
 
 .section{
@@ -60,7 +65,12 @@ a:hover{
 }
 
 
-Header
+/* Header */
+.header-container a{
+    font-family: var(--primary-font);
+    font-weight: 500;
+    color: black;
+}
 .header-container{
             width: 100%;
             display: flex; 
@@ -87,13 +97,14 @@ Header
         display: flex;
         font-weight: 500;
         gap: clamp(0.5rem, 1.0rem + 1vw, 5rem);
-        border-top: 1px solid var(--accent-color); /* Farbe anpassen */
+        border-top: 1px solid black; /* Farbe anpassen */
         padding-top: 6px; /* Abstand zwischen Strich und Links */
 
     }
 
     .title2{
         color: var(--accent-color);
+        font-family: var(--secondary-font);
     }
       
 /* Milonga Calendar*/ 
@@ -185,6 +196,7 @@ Header
         }
 
     .month-divider{
+        font-family: var(--secondary-font);
         font-size: var(--medium);
         font-weight: 300;
         display: flex;
@@ -196,7 +208,7 @@ Header
     content: "";
     flex: 1;
     height: 1px;
-    background: var(--accent-color);  
+    background: grey;  
     }
 
 /* Calendar Buttons */
@@ -206,7 +218,12 @@ Header
 }
 #show-less{
     display:none;
+    color: grey;
 }
+#show-less:hover{
+    color: var(--accent-color);
+}
+
 #show-more{
     margin-left: 45px;
 }
@@ -274,9 +291,20 @@ Header
 }
 
 /* Footer */
+.footer-container a{
+    color: black; 
+    font-weight: 200;  
+}
+.footer-container a:hover{
+    color: var(--accent-color);  
+}
 .footer-container{
     font-size: var(--small);
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+    font-family: "JetBrains Mono";
+    color: black;
+    font-weight: 200;  
+
 }
