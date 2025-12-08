@@ -1,9 +1,9 @@
 let teachers = []
-const teacherContainer = document.getElementsByClassName('teacher-container')
+const teacherContainer = document.getElementsByClassName('teacher-container')[0]
 
 async function init(){
     teachers = await getTeachers()
-    teachers = randomizeTeachers()
+    teachers = randomizeTeachers(teachers)
     displayTeachers()
 }
 
@@ -33,7 +33,7 @@ function displayTeachers(){
         ` 
         <article class = "teacher"> 
         <div class = teacher-info>
-            <h1 class = "teacher-name">${teacherName}</h1>
+            <h2 class = "teacher-name">${teacherName}</h2>
             <p class = "teacher-location">${teacherLoc}</p>
             <a class = "teacher-link" href =${teacherLink} target="_blank">Mehr Infos</a>
         </div>
@@ -46,7 +46,22 @@ function displayTeachers(){
 
 
 function randomizeTeachers(teachers){
-    // Randomize the order of the array
-    return teachers
+// https://pitayan.com/posts/javascript-shuffle-array/
+    var currentIndex = teachers.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = teachers[currentIndex];
+    teachers[currentIndex] = teachers[randomIndex];
+    teachers[randomIndex] = temporaryValue;
+  }
+
+  return teachers;
 }
 

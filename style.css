@@ -308,3 +308,21 @@ a:hover{
     font-weight: 200;  
 
 }
+
+/* This is an idea to combine two fonts for the section title. */
+/* .section-title{
+    display: flex;
+    gap: 0.4rem;
+}
+
+.section-title1{
+    font-family: var(--primary-font);
+    font-size: var(--large);
+    font-weight: 600;
+}
+.section-title2{
+    font-family: var(--secondary-font);
+    font-size: var(--large);
+    font-weight: 600;
+    color: rgb(82, 82, 82);
+} */
