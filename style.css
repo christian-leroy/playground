@@ -307,7 +307,6 @@ a:hover{
     font-family: "JetBrains Mono";
     color: black;
     font-weight: 200;  
-
 }
 
 /* This is an idea to combine two fonts for the section title. */
@@ -328,3 +327,6 @@ a:hover{
     color: rgb(82, 82, 82);
 } */
 
+.teacher-link{
+    color: black;
+}
