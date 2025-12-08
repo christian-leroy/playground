@@ -34,6 +34,7 @@ html{
 }
 .site-container{
     max-width: 1000px;
+    min-height: 100vh;
     margin: 20px auto;
     padding: 0 auto;
 }
@@ -344,3 +345,46 @@ a:hover{
 .teacher-link{
     color: black;
 }
+
+ .about-me-img {
+      width: 100%;
+      max-width: 300px; 
+      height: auto;
+      object-fit: cover;
+  }
+
+  .img-container{
+    justify-self: end;
+  }
+
+.about-me-grid{
+    display:grid;
+    grid-auto-columns: 2fr 1fr;
+    gap: 1.0rem;
+    margin: 0;
+    max-width: 1000px;
+    grid-template-areas:
+    "intro img"
+    "outro img"
+    "reihenfolge img"
+    "open-source img"
+    "impressum img"
+}
+
+@media(max-width: 600px){
+    
+    .about-me-grid{
+        grid-template-areas:
+        "intro"
+        "img"
+        "outro"
+        "reihenfolge"
+        "open-source"
+        "impressum"
+    }
+
+    .about-me-img{
+        max-width: 600px;
+    }
+}
+
