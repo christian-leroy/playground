@@ -33,9 +33,8 @@ function displayTeachers(){
         ` 
         <article class = "teacher"> 
         <div class = teacher-info>
-            <h2 class = "teacher-name">${teacherName}</h2>
+            <h2 class = "teacher-name"><a href=${teacherLink} target="_blank">${teacherName} </a></h2>
             <p class = "teacher-location">${teacherLoc}</p>
-            <a class = "teacher-link" href =${teacherLink} target="_blank">Mehr Infos</a>
         </div>
         </article>
         `
