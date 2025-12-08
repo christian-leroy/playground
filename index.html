@@ -38,7 +38,6 @@
     <h1>Tango tanzen</h1>
     <p>Hier findet ihr alle Milongas und Practicas, die in Tübingen stattfinden.</p>
 </div>
-
         <!-- Milonga-Kalender -->
         <div class = "milonga-cal-wrapper">
         <div id = "cal" class = "milonga-cal-grid">
@@ -50,9 +49,8 @@
         </div>
         <script src="milonga-cal.js"></script>
         <script>
-        init()
+        initMilongaCal()
         </script>
-
 
 <!-- Section: Learning -->
 
@@ -67,7 +65,7 @@
 
 <div class = "teacher-container">
 
-    <article class = "teacher"> 
+    <!-- <article class = "teacher"> 
         <p class = "enumerator">1</p>
         <div class = teacher-info>
             <h1 class = "teacher-name">Tango ParaTu</h1>
@@ -101,8 +99,10 @@
             <p class = "teacher-location">Französisches Viertel</p>
             <a class = "teacher-link" href =https://www.tanzimfranz.de/ target="_blank">Mehr Infos</a>
         </div>
-    </article>
+    </article> -->
 </div>
+<script src="teacher-list.js"></script>
+<script>init()</script>   
 
 
 
@@ -154,6 +154,15 @@
 
 
 <!-- Website Footer -->
+<footer>
+   <nav>
+        <div class ="footer-container">
+                <span class="author">Christian Leroy 2026</span>
+                <a class="contact" href = contact.html target="_blank">Kontakt & Impressum</span>
+        </div>
+   </nav>
+</footer>
+
 
 
 </div>

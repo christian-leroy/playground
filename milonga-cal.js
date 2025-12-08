@@ -7,13 +7,14 @@ let milongas = []
 let lastMilongaInCurrentCal = -1 // index of milongas
 let currentMonth = -1 // Will be a Date object once first milongas has been displayed
 
-async function init(){
+async function initMilongaCal(){
     console.log("Fetching milonga data from JSON.")
     milongas = await getMilongas()
     milongas = processMilongas(milongas)
     console.log("Fetched and processed milonga data from JSON.")
     displayNextMilongas(defaultAmount)
 }
+
 
 async function getMilongas(){
   const url = "milongas.json";
