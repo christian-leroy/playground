@@ -8,7 +8,7 @@ async function init(){
 }
 
 async function getTeachers(){
-  const url = "teachers.json";
+  const url = "../data/teachers.json";
   try {
     const response = await fetch(url);
     if (!response.ok) {

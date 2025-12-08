@@ -17,7 +17,7 @@ async function initMilongaCal(){
 
 
 async function getMilongas(){
-  const url = "milongas.json";
+  const url = "../data/milongas.json";
   try {
     const response = await fetch(url);
     if (!response.ok) {
