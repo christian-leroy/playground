@@ -16,7 +16,7 @@
 /* #d41815; Tübingen-Rot */
 h1{
     font-size: var(--large);
-    font-variant: small-caps;
+    font-weight: 600;
 }
 h2{
     font-size: var(--medium);
@@ -270,6 +270,10 @@ a:hover{
     display: flex;
     gap: 1rem;
     align-items: flex-start;}
+    
+.community-name{
+    line-height: 1;
+}
 
 .enumerator{
     display: flex;
