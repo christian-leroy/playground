@@ -1,3 +1,69 @@
+/* Local Font Definitions */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/montserrat-300.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/montserrat-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/montserrat-500.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/montserrat-600.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/montserrat-700.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('fonts/jetbrains-mono-300.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/jetbrains-mono-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/jetbrains-mono-500.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/jetbrains-mono-600.ttf') format('truetype');
+}
+
 /* Definition of variables */
   :root{
     --primary-font: "Montserrat";
@@ -13,8 +79,8 @@
     --standard-weight: 400;
     --accent-weight: 600;
   }
-/* #d41815; Tübingen-Rot */
-h1{
+
+  h1{
     font-size: var(--large);
     font-weight: 600;
 }
@@ -202,7 +268,7 @@ a:hover{
         }
 
     .month-divider{
-        font-family: var(--secondary-font);
+        font-family: var(--primary-font);
         font-size: var(--medium);
         font-weight: 300;
         display: flex;
