@@ -25,6 +25,7 @@ async function getTeachers(){
 
 function displayTeachers(){
     let html_buffer = ''
+    let number = 1
     for (const teacher of teachers) {
         const teacherName = teacher.name
         const teacherLoc = teacher.location
@@ -32,6 +33,7 @@ function displayTeachers(){
         html =
         ` 
         <article class = "teacher"> 
+        <p class = "enumerator">${number}</p>
         <div class = teacher-info>
             <h2 class = "teacher-name"><a href=${teacherLink} target="_blank">${teacherName} </a></h2>
             <p class = "teacher-location">${teacherLoc}</p>
@@ -39,6 +41,7 @@ function displayTeachers(){
         </article>
         `
         html_buffer += html
+        number++
     }
     teacherContainer.insertAdjacentHTML('beforeend', html_buffer)
 }

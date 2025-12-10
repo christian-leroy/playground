@@ -69,15 +69,18 @@
     --primary-font: "Montserrat";
     --secondary-font: "JetBrains Mono";
     --calendar-vertical-gap: 0rem;
+    --standard-weight: 400;
+    --accent-weight: 600;
 
-    /* Font sizes Milonga Calendar*/
+    /* Three font sizes*/
     --large: clamp(1.3rem, 1.0rem + 0.5vw, 1.6rem);
     --medium: clamp(1.0rem, 0.8rem + 0.3vw, 1.3rem);
     --small: clamp(0.8rem, 0.8rem + 0.3vw, 1.0rem);
 
     --accent-color: #E75821;
-    --standard-weight: 400;
-    --accent-weight: 600;
+
+    /* Margins */
+    --section-margin: clamp(1.3rem, 1.0rem + 0.5vw, 1.6rem);
   }
 
   h1{
@@ -111,6 +114,7 @@ body
     font-weight: var(--standard-weight);
     font-size: var(--medium);
     padding: 0 24px;
+    hyphens: auto;
 }
 
 a{
@@ -132,7 +136,8 @@ a:hover{
 }
 
 
-/* Header */
+
+/* ––––––– Footer ––––––– */
 .header-container a{
     font-family: var(--primary-font);
     font-weight: 500;
@@ -178,7 +183,30 @@ a:hover{
         color: var(--accent-color);
         font-family: var(--secondary-font);
     }
-      
+
+
+
+/* ––––––– Footer ––––––– */
+.footer-container a{
+    color: black; 
+    font-weight: 200;  
+}
+.footer-container a:hover{
+    color: var(--accent-color);  
+}
+.footer-container{
+    font-size: var(--small);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    font-family: "JetBrains Mono";
+    color: black;
+    font-weight: 200;  
+}
+
+
+/* ––––––– Section 1: Tanzen ––––––– */
+
 /* Milonga Calendar*/ 
 .milonga-cal-wrapper{
     display: flex;
@@ -302,12 +330,23 @@ a:hover{
 
 
 
+/* ––––––– Section 2: Lernen ––––––– */
+
 .teacher-container{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 3rem;
+        display: grid;
+        gap: 1rem;
         margin-bottom: 1rem;
+        grid-template-columns: max-content max-content;
+        justify-content: center;
     }
+@media(min-width: 750px){
+    .teacher-container{
+        grid-auto-flow: column;
+        grid-auto-columns: auto;
+        grid-template-columns: none;
+        justify-content: space-between;
+    }
+}
 
 .teacher{
     display: flex;
@@ -332,6 +371,21 @@ a:hover{
     color: var(--accent-color);
 }
 
+.enumerator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid black;
+    border-radius: 50%;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+
+/* ––––––– Section 3: Community ––––––– */
+
 .community-container{
     display: grid;
     grid-template-columns: 1fr;
@@ -352,18 +406,6 @@ a:hover{
     line-height: 1;
 }
 
-.enumerator{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    border: 1.5px solid black;
-    border-radius: 50%;
-    font-weight: 500;
-    flex-shrink: 0;
-}
-
 .community-icon{
     width: var(--large);
     height: var(--large);
@@ -372,23 +414,10 @@ a:hover{
     flex-shrink: 0;
 }
 
-/* Footer */
-.footer-container a{
-    color: black; 
-    font-weight: 200;  
-}
-.footer-container a:hover{
-    color: var(--accent-color);  
-}
-.footer-container{
-    font-size: var(--small);
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-    font-family: "JetBrains Mono";
+.teacher-link{
     color: black;
-    font-weight: 200;  
 }
+
 
 /* This is an idea to combine two fonts for the section title. */
 /* .section-title{
@@ -408,9 +437,9 @@ a:hover{
     color: rgb(82, 82, 82);
 } */
 
-.teacher-link{
-    color: black;
-}
+
+
+/* ––––––– Contact ––––––– */
 
  .about-me-img {
       width: 100%;
