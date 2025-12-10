@@ -114,7 +114,6 @@ body
     font-weight: var(--standard-weight);
     font-size: var(--medium);
     padding: 0 24px;
-    hyphens: auto;
 }
 
 a{
@@ -390,6 +389,7 @@ a:hover{
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    hyphens: auto;
 }
 @media(min-width: 700px){
     .community-container{
