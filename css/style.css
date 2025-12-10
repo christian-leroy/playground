@@ -340,6 +340,9 @@ a:hover{
         justify-content: start;
         max-width: 800px;
         margin-top: var(--medium);
+        list-style: none;
+        padding: 0;
+        counter-reset: teacher-counter;
 
     }
 @media(min-width: 750px){
@@ -379,7 +382,9 @@ a:hover{
     color: var(--accent-color);
 }
 
-.enumerator{
+.teacher::before{
+    content: counter(teacher-counter);
+    counter-increment: teacher-counter;
     display: flex;
     justify-content: center;
     align-items: center;
