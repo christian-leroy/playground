@@ -313,19 +313,25 @@ a:hover{
 
 /* Calendar Buttons */
 .milonga-cal-buttons{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    align-items: start;
+    grid-auto-columns: 22px minmax(0, 6fr) minmax(0, 4fr);
+    column-gap: 1rem;
+    grid-template-areas: "day title dj";
+    margin-left: 6px;
 }
+
+#show-more{
+    grid-area: title;
+}
+
 #show-less{
-    display:none;
+    grid-area: dj;
+    display: none;
     color: grey;
 }
 #show-less:hover{
     color: var(--accent-color);
-}
-
-#show-more{
-    margin-left: 45px;
 }
 
 
@@ -396,6 +402,11 @@ a:hover{
     flex-shrink: 0;
 }
 
+.button{
+    background: whitesmoke;
+    font-size: var(--medium);
+    border: none;
+}
 
 /* ––––––– Section 3: Community ––––––– */
 
