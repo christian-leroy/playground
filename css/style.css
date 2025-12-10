@@ -80,7 +80,7 @@
     --accent-color: #E75821;
 
     /* Margins */
-    --section-margin: clamp(1.3rem, 1.0rem + 0.5vw, 1.6rem);
+    --section-margin: var(--large);
   }
 
   h1{
@@ -130,7 +130,7 @@ a:hover{
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--section-margin);
     gap: 0.3rem;
 }
 
@@ -207,13 +207,14 @@ a:hover{
 /* ––––––– Section 1: Tanzen ––––––– */
 
 /* Milonga Calendar*/ 
-.milonga-cal-wrapper{
+.milonga-container{
     display: flex;
     flex-direction: column;
     max-width:1000px;
     gap: 0.5rem;
+    margin-top: var(--medium);
 }
-.milonga-cal-grid{
+.milonga-grid{
         display:grid;
         gap: 1.0rem;
         grid-auto-flow: row;
@@ -338,6 +339,7 @@ a:hover{
         grid-template-columns: max-content max-content;
         justify-content: start;
         max-width: 800px;
+        margin-top: var(--medium);
 
     }
 @media(min-width: 750px){
@@ -396,6 +398,7 @@ a:hover{
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    margin-top: var(--medium);
 }
 @media(min-width: 700px){
     .community-container{
