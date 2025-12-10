@@ -74,7 +74,7 @@
 
     /* Three font sizes*/
     --large: clamp(1.3rem, 1.0rem + 0.5vw, 1.6rem);
-    --medium: clamp(1.0rem, 1.0rem + 0.3vw, 1.3rem);
+    --medium: clamp(1.0rem, 0.8rem + 0.3vw, 1.3rem);
     --small: clamp(0.8rem, 0.8rem + 0.3vw, 1.0rem);
 
     --accent-color: #E75821;
