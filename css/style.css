@@ -74,7 +74,7 @@
 
     /* Three font sizes*/
     --large: clamp(1.3rem, 1.0rem + 0.5vw, 1.6rem);
-    --medium: clamp(1.0rem, 0.8rem + 0.3vw, 1.3rem);
+    --medium: clamp(1.0rem, 1.0rem + 0.3vw, 1.3rem);
     --small: clamp(0.8rem, 0.8rem + 0.3vw, 1.0rem);
 
     --accent-color: #E75821;
@@ -336,7 +336,9 @@ a:hover{
         gap: 1rem;
         margin-bottom: 1rem;
         grid-template-columns: max-content max-content;
-        justify-content: center;
+        justify-content: start;
+        max-width: 800px;
+
     }
 @media(min-width: 750px){
     .teacher-container{
@@ -351,12 +353,17 @@ a:hover{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 1rem;
+    gap: clamp(0.5rem, 0.5rem + 1vw, 1.0rem);
+
 }
 
 .teacher-info{
     display: flex;
     flex-direction: column;
+}
+
+.teacher-name{
+    line-height: 1;
 }
 
 .teacher-name a{
