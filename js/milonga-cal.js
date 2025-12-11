@@ -28,8 +28,8 @@ async function getMilongas(){
     return result;
   } catch (error) {
     console.error(error.message);
+    return [];
   }
-  return result
 }
 
 function displayNextMilongas(k){
@@ -169,10 +169,90 @@ const moreBtn = document.getElementById("show-more")
 const lessBtn =  document.getElementById("show-less")
 moreBtn.onclick = () => {
     displayNextMilongas(defaultAmount);
-    lessBtn.style.display = "flex"; 
+    lessBtn.style.display = "flex";
 }
 lessBtn.onclick = () => {
     collapseMilongas()
     {lessBtn.style.display = "none";}
     lessBtn.style.display = "none";
-}   
+}
+
+
+function generateAllMilongaSchemas(){
+/**
+ * Generates Schema.org DanceEvent JSON-LD markup for all milongas and injects it into the document head.
+ * Called after milongas data has been loaded and processed.
+ * SEO: Helps Google display events in rich search results and Google Event Search.
+ */
+    console.log("Generating Schema.org markup for all milongas.")
+
+    milongas.forEach(milonga => {
+        // Parse city string to extract postal code and city name
+        const cityParts = milonga.city.split(' ')
+        const postalCode = cityParts[0]
+        const cityName = cityParts.slice(1).join(' ')
+
+        // Build the schema object
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "DanceEvent",
+            "name": milonga.title,
+            "startDate": milonga.date.toISOString().split('T')[0] + 'T' + milonga.start_time,
+            "endDate": milonga.date.toISOString().split('T')[0] + 'T' + milonga.end_time,
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "location": {
+                "@type": "Place",
+                "name": milonga.venue,
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": milonga.street,
+                    "addressLocality": cityName,
+                    "postalCode": postalCode,
+                    "addressCountry": "DE"
+                }
+            },
+            "performer": {
+                "@type": "Person",
+                "name": milonga.dj
+            }
+        }
+
+        // Add optional fields only if they exist and are not null
+        if (milonga.description) {
+            schema.description = milonga.description
+        }
+
+        if (milonga.url) {
+            schema.url = milonga.url
+        }
+
+        if (milonga.organizer) {
+            schema.organizer = {
+                "@type": "Organization",
+                "name": milonga.organizer
+            }
+            if (milonga.organizer_url) {
+                schema.organizer.url = milonga.organizer_url
+            }
+        }
+
+        if (milonga.price !== null) {
+            schema.offers = {
+                "@type": "Offer",
+                "price": milonga.price,
+                "priceCurrency": milonga.currency,
+                "availability": "https://schema.org/InStock",
+                "url": milonga.url || "https://tangotübingen.de/"
+            }
+        }
+
+        // Create script element and inject into head
+        const script = document.createElement('script')
+        script.type = 'application/ld+json'
+        script.text = JSON.stringify(schema)
+        document.head.appendChild(script)
+    })
+
+    console.log(`Generated Schema.org markup for ${milongas.length} milongas.`)
+}

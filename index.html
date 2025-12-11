@@ -80,7 +80,9 @@
     </div>
         <script src="js/milonga-cal.js"></script>
         <script>
-        initMilongaCal()
+        initMilongaCal().then(() => {
+            generateAllMilongaSchemas()
+        })
         </script>
 </div>
 
