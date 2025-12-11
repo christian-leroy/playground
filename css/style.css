@@ -84,10 +84,17 @@
   }
 
   h1{
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+h2{
     font-size: var(--large);
     font-weight: 600;
 }
-h2{
+h3{
     font-size: var(--medium);
 }
 
